@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zhiwen.httptest.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/tvURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etURL"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:text="URL"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/etURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tvURL"
+        android:layout_toRightOf="@+id/tvURL"
+        android:ems="10"
+        android:hint="http://"
+        android:inputType="textPersonName"
+        android:text="URL" />
+
+    <Button
+        android:id="@+id/btnPhp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnGo"
+        android:text=".php" />
+
+    <Button
+        android:id="@+id/btnHtml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPhp"
+        android:layout_toEndOf="@+id/btnPhp"
+        android:layout_toRightOf="@+id/btnPhp"
+        android:text=".html" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnPhp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoBtnClick"
+        android:text="Go"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/etURL"
+        android:layout_toEndOf="@+id/etURL" />
+
+</RelativeLayout>
